@@ -1,5 +1,5 @@
 <?php
-// 1. Initial Logic: Check if the form was submitted
+/*checking if the form is submitted*/
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['num_students'])) {
     $num_students = (int)$_POST['num_students'];
     $students = [];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['num_students'])) {
         $total = $math + $english + $science;
         $average = $total / 3;
 
-        // 4. Determine Grade using If... Else [cite: 13, 14, 32]
+        /*using If... Else [cite: 13, 14, 32] */
         if ($average >= 80) {
             $grade = "A";
         } elseif ($average >= 70) {
